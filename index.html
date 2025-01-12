@@ -5,21 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Pricing Plans</title>
-
-    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
+
   <body>
     <main class="pricing-page">
       <h1 class="pricing-page__title">Choose your plan</h1>
       <p class="pricing-page__subtitle">
-        Explore our plans and never miss a moment...
+        Explore our plans and never miss a moment of the world's biggest sports
+        competitions.
+        <br />Stream global championships live and on-demand, anytime, anywhere
       </p>
 
       <section class="pricing">
         <div class="pricing__card">
-          <h2>US Sport</h2>
+          <div class="pricing__dot"></div>
+          <h2 class="pricing__title">US Sport</h2>
           <p>7 days of access</p>
-          <span class="pricing__price">$14.99 <small>/ 7 days</small></span>
+          <span class="pricing__price">
+            $14 <small class="pricing__price-text">.99 / 7 days</small>
+          </span>
           <select class="pricing__dropdown">
             <option>7 days subscription</option>
           </select>
@@ -30,10 +41,13 @@
           </ul>
           <button class="btn">Get Started</button>
         </div>
-        <div class="pricing__card pricing__card--highlighted">
-          <h2>Ultimates Sports</h2>
+        <div class="pricing__card">
+          <div class="pricing__dot"></div>
+          <h2 class="pricing__title">Ultimates Sports</h2>
           <p>30 days of access</p>
-          <span class="pricing__price">$19.99 <small>/ monthly</small></span>
+          <span class="pricing__price">
+            $19 <small class="pricing__price-text">.99 / monthly</small>
+          </span>
           <select class="pricing__dropdown">
             <option>Monthly subscription</option>
             <option>Annual subscription</option>
@@ -46,9 +60,12 @@
           <button class="btn">Get Started</button>
         </div>
         <div class="pricing__card">
-          <h2>All Sports</h2>
+          <div class="pricing__dot"></div>
+          <h2 class="pricing__title">All Sports</h2>
           <p>365 days of access</p>
-          <span class="pricing__price">$99.99 <small>/ annual</small></span>
+          <span class="pricing__price">
+            $99 <small class="pricing__price-text">.99 / annual</small>
+          </span>
           <select class="pricing__dropdown">
             <option>Annual subscription</option>
           </select>
@@ -66,6 +83,6 @@
       </footer>
     </main>
 
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
