@@ -34,7 +34,7 @@
   grid-template-columns: repeat(3, minmax(288px, 396px));
   gap: 30px;
   justify-content: center;
-  padding: 30px;
+  padding: 58px 30px 64px;
 
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
@@ -51,14 +51,42 @@
     display: flex;
     flex-direction: column;
     transition: background-color 0.2s;
-    
-    &--highlighted {
-      background-color: #19aeb780;
+
+    .pricing__dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid variables.$white;
+      margin-left: auto;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        top: 6px;
+        left: 6px;
+        background-color: transparent;
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        transition: background-color 0.2s;
+      }
     }
 
-    h2 {
-      color: variables.$primary-color;
+    &--selected {
+      background-color: #19aeb780;
+
+      .pricing__dot {
+        &::after {
+          background-color: variables.$white;
+        }
+      }
     }
+
+    //  {
+    //   color: variables.$primary-color;
+    // }
 
     .pricing__price {
       font-size: variables.$font-size-h3;
