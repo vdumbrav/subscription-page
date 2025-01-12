@@ -1,0 +1,56 @@
+@use "base";
+@use "typography";
+
+.pricing-page {
+  background-image: linear-gradient(
+      rgba(10, 23, 30, 0.98) 100%,
+      rgba(10, 23, 30, 0.98) 100%
+    ),
+    url(../images/bgscreen.jpg);
+  background-attachment: fixed;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  background-size: auto;
+
+  text-align: center;
+  padding: 2rem;
+
+  &__title {
+    font-size: typography.$font-size-h1;
+  }
+
+  &__subtitle {
+    font-size: typography.$font-size-body-md;
+    margin-bottom: 2rem;
+  }
+}
+
+.pricing {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  &__card {
+    background: base.$gray-10;
+    border-radius: base.$border-radius;
+    padding: 1rem;
+    width: 300px;
+    text-align: left;
+    color: base.$white;
+
+    &--highlighted {
+      border: 2px solid base.$primary-color;
+    }
+
+    h2 {
+      color: base.$primary-color;
+    }
+
+    .pricing__price {
+      font-size: typography.$font-size-h3;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+  }
+}

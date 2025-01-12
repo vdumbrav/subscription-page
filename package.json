@@ -1,0 +1,33 @@
+{
+  "name": "pricing-landing",
+  "version": "1.0.0",
+  "description": "Responsive landing page for pricing plans",
+  "main": "index.js",
+  "homepage": "https://github.com/vdumbrav/subscription-page",
+  "scripts": {
+    "deploy": "gh-pages -d dist",
+    "copy:images": "cp -R src/images dist/",
+    "build:scss": "sass src/scss/main.scss dist/css/main.css --no-source-map",
+    "build:postcss": "postcss dist/css/main.css --use autoprefixer -o dist/css/main.css",
+    "build:ts": "tsc",
+    "build": "npm run copy:images && npm run build:scss && npm run build:postcss && npm run build:ts",
+    "watch:scss": "sass --watch src/scss/main.scss:dist/css/main.css",
+    "watch:ts": "tsc --watch",
+    "start:server": "lite-server",
+    "start": "npm run watch:scss & npm run watch:ts & npm run start:server"
+  },
+  "browserslist": [
+    ">0.2%",
+    "last 3 versions",
+    "not dead",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "gh-pages": "^6.3.0",
+    "lite-server": "^2.6.1",
+    "postcss": "^8.4.21",
+    "sass": "^1.56.0",
+    "typescript": "^4.9.5"
+  }
+}
