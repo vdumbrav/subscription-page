@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Responsive landing page for pricing plans",
   "main": "index.js",
-  "homepage": "https://vdumbrava.github.io/subscription-page",
+  "homepage": "https://vdumbrav.github.io/subscription-page",
   "scripts": {
     "deploy": "gh-pages -d dist",
     "copy:images": "cp -R src/images dist/",
