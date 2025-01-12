@@ -47,51 +47,96 @@
     border-radius: 24px;
     padding: 40px 40px 60px 40px;
     color: variables.$white;
-    gap: 48px;
+    gap: 12px;
     display: flex;
     flex-direction: column;
     transition: background-color 0.2s;
+    text-align: left;
 
-    .pricing__dot {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      border: 1px solid variables.$white;
-      margin-left: auto;
-      position: relative;
-
-      &::after {
-        content: "";
-        width: 24px;
-        height: 24px;
-        top: 6px;
-        left: 6px;
-        background-color: transparent;
-        display: block;
-        position: absolute;
+    .pricing {
+      &__dot {
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
-        transition: background-color 0.2s;
+        border: 1px solid variables.$white;
+        margin-left: auto;
+        position: relative;
+        margin-bottom: 12px;
+
+        &::after {
+          content: "";
+          width: 0;
+          height: 0;
+          top: 19px;
+          left: 19px;
+          background-color: transparent;
+          display: block;
+          position: absolute;
+          border-radius: 50%;
+          transition: 0.2s;
+        }
+      }
+
+      &__title {
+        font-size: variables.$font-size-h3;
+        margin: 0;
+      }
+
+      &__subtitle {
+        color: variables.$gray-60;
+        margin: 0;
+        font-size: variables.$font-size-body-md;
+        line-height: variables.$line-height-body-md;
+      }
+
+      &__price {
+        font-size: variables.$font-size-h1;
+        font-weight: bold;
+        margin: 36px 0;
+
+        &-text {
+          margin-left: -8px;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: variables.$line-height-body-md;
+        }
+      }
+
+      &__dropdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 12px;
+        gap: 8px;
+        isolation: isolate;
+        height: 48px;
+        border: 2px solid variables.$primary-color;
+        backdrop-filter: blur(15px);
+        border-radius: 8px;
+        background-color: variables.$background-color;
+        color: variables.$white;
       }
     }
 
     &--selected {
       background-color: #19aeb780;
 
-      .pricing__dot {
-        &::after {
-          background-color: variables.$white;
+      .pricing {
+        &__dot {
+          &::after {
+            top: 6px;
+            left: 6px;
+            width: 24px;
+            height: 24px;
+            background-color: variables.$white;
+          }
+        }
+
+        &__dropdown {
+          background-color: #19aeb740;
+          border-color: variables.$white;
         }
       }
-    }
-
-    //  {
-    //   color: variables.$primary-color;
-    // }
-
-    .pricing__price {
-      font-size: variables.$font-size-h3;
-      font-weight: bold;
-      margin: 1rem 0;
     }
   }
 }

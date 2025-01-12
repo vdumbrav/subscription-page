@@ -7,16 +7,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   pricingCards.forEach((card, index) => {
-    card.addEventListener("click", () => {
+    card.addEventListener("click", (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+
+      // Skip logic if clicking on <select>
+      if (
+        target.tagName === "SELECT" &&
+        target.classList.contains("pricing__dropdown")
+      ) {
+        return; // Skip card selection logic
+      }
+
+      // Select the card
       pricingCards.forEach((c) =>
         c.classList.remove("pricing__card--selected")
       );
 
       card.classList.add("pricing__card--selected");
 
-    //   setTimeout(() => {
-    //     alert(`Subscription ${index + 1} selected!`);
-    //   }, 300);
+      console.log(`Card ${index + 1} selected.`);
     });
   });
 });
