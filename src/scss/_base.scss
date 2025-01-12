@@ -1,21 +1,21 @@
 body {
   margin: 0;
-  font-family: var(--font-family);
-  background-color: var(--background-color);
   color: var(--white);
+  background-color: var(--background-color);
+  font-family: var(--font-family);
 }
 
 button {
-  background: var(--primary-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
   color: var(--white);
   border: none;
-  padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
-  cursor: pointer;
+  background: var(--primary-color);
   font-size: var(--button-font-size);
 }
 
 ul {
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
