@@ -1,20 +1,18 @@
-@use "variables";
-
 body {
   margin: 0;
-  font-family: variables.$font-family;
-  background-color: variables.$background-color;
-  color: variables.$white;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--white);
 }
 
 button {
-  background: variables.$primary-color;
-  color: variables.$white;
+  background: var(--primary-color);
+  color: var(--white);
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: variables.$border-radius;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  font-size: variables.$button-font-size;
+  font-size: var(--button-font-size);
 }
 
 ul {

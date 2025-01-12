@@ -14,6 +14,10 @@
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 992px) {
+    padding: 16px;
+  }
+
   &__title {
     font-size: variables.$font-size-h2;
     font-weight: 700;
@@ -37,8 +41,8 @@
   padding: 58px 30px 64px;
 
   @media (max-width: 992px) {
-    grid-template-columns: 1fr;
-    padding: 16px;
+    grid-template-columns: repeat(1, minmax(288px, 396px));
+    padding: 16px 0;
     gap: 48px;
   }
 
@@ -115,6 +119,32 @@
         border-radius: 8px;
         background-color: variables.$background-color;
         color: variables.$white;
+      }
+
+      &__features {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &-item {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+        }
+
+        &-text {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1.5;
+          margin: 0;
+        }
+      }
+
+      &__note {
+        font-size: 14px;
+        line-height: 1.5;
+        color: variables.$gray-60;
+        margin: 0;
       }
     }
 
