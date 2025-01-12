@@ -1,124 +1,122 @@
-@use "variables";
-
 .pricing-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   background-image: linear-gradient(
       rgba(10, 23, 30, 0.98) 100%,
       rgba(10, 23, 30, 0.98) 100%
     ),
     url(../images/bgscreen.jpg);
+  background-repeat: repeat;
   background-attachment: fixed;
   background-position: 0% 0%;
-  background-repeat: repeat;
   background-size: auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
 
   @media (max-width: 992px) {
     padding: 16px;
   }
 
   &__title {
-    font-size: variables.$font-size-h2;
+    margin-bottom: 48px;
+    font-size: var(--font-size-h2);
     font-weight: 700;
     line-height: 1.3;
-    margin-bottom: 48px;
   }
 
   &__subtitle {
-    font-size: variables.$font-size-body-lg;
-    line-height: variables.$line-height-body-md;
     margin-bottom: 48px;
-    color: variables.$gray-75;
+    color: var(--gray-75);
+    font-size: var(--font-size-body-lg);
+    line-height: var(--line-height-body-md);
   }
 }
 
 .pricing {
   display: grid;
-  grid-template-columns: repeat(3, minmax(288px, 396px));
-  gap: 30px;
   justify-content: center;
   padding: 58px 30px 64px;
+  grid-template-columns: repeat(3, minmax(288px, 396px));
+  gap: 30px;
 
   @media (max-width: 992px) {
-    grid-template-columns: repeat(1, minmax(288px, 396px));
     padding: 16px 0;
+    grid-template-columns: repeat(1, minmax(288px, 396px));
     gap: 48px;
   }
 
   &__card {
-    background-color: variables.$background-color;
-    border-radius: 24px;
-    padding: 40px 40px 60px 40px;
-    color: variables.$white;
-    gap: 12px;
     display: flex;
     flex-direction: column;
+    padding: 40px 40px 60px 40px;
     transition: background-color 0.2s;
     text-align: left;
+    color: var(--white);
+    border-radius: 24px;
+    background-color: var(--background-color);
+    gap: 12px;
 
     .pricing {
       &__dot {
+        position: relative;
         width: 36px;
         height: 36px;
-        border-radius: 50%;
-        border: 1px solid variables.$white;
-        margin-left: auto;
-        position: relative;
         margin-bottom: 12px;
+        margin-left: auto;
+        border: 1px solid var(--white);
+        border-radius: 50%;
 
         &::after {
-          content: "";
-          width: 0;
-          height: 0;
+          position: absolute;
           top: 19px;
           left: 19px;
-          background-color: transparent;
           display: block;
-          position: absolute;
-          border-radius: 50%;
+          width: 0;
+          height: 0;
+          content: "";
           transition: 0.2s;
+          border-radius: 50%;
+          background-color: transparent;
         }
       }
 
       &__title {
-        font-size: variables.$font-size-h3;
         margin: 0;
+        font-size: var(--font-size-h3);
       }
 
       &__subtitle {
-        color: variables.$gray-60;
         margin: 0;
-        font-size: variables.$font-size-body-md;
-        line-height: variables.$line-height-body-md;
+        color: var(--gray-60);
+        font-size: var(--font-size-body-md);
+        line-height: var(--line-height-body-md);
       }
 
       &__price {
-        font-size: variables.$font-size-h1;
-        font-weight: bold;
         margin: 36px 0;
+        font-size: var(--font-size-h1);
+        font-weight: bold;
 
         &-text {
           margin-left: -8px;
           font-size: 20px;
           font-weight: 600;
-          line-height: variables.$line-height-body-md;
+          line-height: var(--line-height-body-md);
         }
       }
 
       &__dropdown {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        height: 48px;
         padding: 0 12px;
+        color: var(--white);
+        border: 2px solid var(--primary-color);
+        border-radius: 8px;
+        background-color: var(--background-color);
         gap: 8px;
         isolation: isolate;
-        height: 48px;
-        border: 2px solid variables.$primary-color;
         backdrop-filter: blur(15px);
-        border-radius: 8px;
-        background-color: variables.$background-color;
-        color: variables.$white;
       }
 
       &__features {
@@ -133,23 +131,23 @@
         }
 
         &-text {
+          margin: 0;
           font-size: 16px;
           font-weight: 500;
           line-height: 1.5;
-          margin: 0;
         }
       }
 
       &__note {
+        margin: 0;
+        color: var(--gray-60);
         font-size: 14px;
         line-height: 1.5;
-        color: variables.$gray-60;
-        margin: 0;
       }
     }
 
     &--selected {
-      background-color: #19aeb780;
+      background-color: rgba(25, 174, 183, 0.5);
 
       .pricing {
         &__dot {
@@ -158,13 +156,13 @@
             left: 6px;
             width: 24px;
             height: 24px;
-            background-color: variables.$white;
+            background-color: var(--white);
           }
         }
 
         &__dropdown {
-          background-color: #19aeb740;
-          border-color: variables.$white;
+          border-color: var(--white);
+          background-color: rgba(25, 174, 183, 0.25);
         }
       }
     }
