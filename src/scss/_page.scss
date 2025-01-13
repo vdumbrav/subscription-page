@@ -263,3 +263,15 @@
     }
   }
 }
+
+.payment-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 200px;
+  gap: 21px;
+
+  &__img {
+    object-fit: contain;
+  }
+}
