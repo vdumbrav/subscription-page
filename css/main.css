@@ -502,3 +502,14 @@ button {
 .radio__input:checked + .radio__custom + .radio__label {
   font-weight: 500;
 }
+
+.payment-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 200px;
+  gap: 21px;
+}
+.payment-logos__img {
+  object-fit: contain;
+}
