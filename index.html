@@ -12,7 +12,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <!-- <base href="/subscription-page/" /> -->
   </head>
 
   <body>
@@ -170,6 +169,38 @@
           <!-- <button class="btn">Get Started</button> -->
           <p class="pricing__note">NOTE: Invoice will be handled by TazzSEO!</p>
         </div>
+      </section>
+
+      <section class="payment-system">
+        <h3 class="payment-system__title">Choose a Payment System</h3>
+        <form class="payment-system__form">
+          <label class="radio">
+            <input
+              type="radio"
+              name="payment"
+              value="paynet"
+              class="radio__input"
+              checked
+            />
+            <span class="radio__custom"></span>
+            <span class="radio__label">Paynet - pay by card</span>
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="payment"
+              value="paypal"
+              class="radio__input"
+            />
+            <span class="radio__custom"></span>
+            <span class="radio__label">
+              Paypal - Pay with your PayPal account
+            </span>
+          </label>
+          <button class="payment-system__button" type="button">
+            Get Started
+          </button>
+        </form>
       </section>
 
       <footer class="footer">

@@ -337,13 +337,14 @@ button {
 }
 .pricing__card .pricing__dot::after {
   position: absolute;
-  top: 19px;
-  left: 19px;
+  top: 50%;
+  left: 50%;
   display: block;
   width: 0;
   height: 0;
   content: "";
   transition: 0.2s;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   background-color: transparent;
 }
@@ -408,8 +409,6 @@ button {
   background-color: rgba(25, 174, 183, 0.5);
 }
 .pricing__card--selected .pricing__dot::after {
-  top: 6px;
-  left: 6px;
   width: 24px;
   height: 24px;
   background-color: var(--white);
@@ -417,4 +416,89 @@ button {
 .pricing__card--selected .pricing__dropdown {
   border-color: var(--white);
   background-color: rgba(25, 174, 183, 0.25);
+}
+
+.payment-system {
+  width: 352px;
+  max-width: 100%;
+  margin: 16px auto;
+  text-align: left;
+  color: var(--white);
+}
+.payment-system__title {
+  margin-bottom: 28px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.payment-system__form {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+}
+.payment-system__button {
+  width: 100%;
+  margin-top: 36px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 8px;
+  background-color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+}
+.payment-system__button:hover {
+  color: var(--primary-color);
+  background-color: var(--white);
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 26px;
+}
+.radio__input {
+  display: none;
+}
+.radio__label {
+  transition: font-weight 0.2s;
+}
+.radio__custom {
+  position: relative;
+  width: 20px;
+  min-width: 20px;
+  margin-right: 12px;
+  height: 20px;
+  transition: background-color 0.2s, border-color 0.2s;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+.radio__custom::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  content: "";
+  transition: 0.2s;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: transparent;
+}
+.radio__input:checked + .radio__custom {
+  border-color: var(--white);
+}
+.radio__input:checked + .radio__custom::after {
+  width: 16px;
+  height: 16px;
+  background-color: var(--white);
+}
+.radio__input:checked + .radio__custom + .radio__label {
+  font-weight: 500;
 }
