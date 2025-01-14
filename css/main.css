@@ -754,7 +754,7 @@ body {
 }
 .modal__form .radio {
   padding: 12px;
-  border: 2px solid #19aeb7;
+  border: 1px solid rgba(10, 9, 15, 0.2);
   gap: 0;
 }
 .modal__form .radio__custom {
@@ -764,6 +764,12 @@ body {
 .modal__form .radio__label-logos {
   display: flex;
   gap: 14px;
+}
+@supports (selector(:has(*))) {
+  .modal__form .radio:has(.radio__input:checked) {
+    padding: 11px;
+    border: 2px solid #19aeb7;
+  }
 }
 .modal__form .radio__input:checked + .radio__custom {
   border-color: #19aeb7;
