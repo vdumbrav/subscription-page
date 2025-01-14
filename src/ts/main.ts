@@ -82,4 +82,29 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+
+  // Modal
+  const modal = document.getElementById("payment-modal")!;
+  const openButtons = document.querySelectorAll(".pricing__btn");
+  const closeModalButton = modal.querySelector(".modal__close")!;
+  const modalOverlay = modal;
+
+  // Open modal
+  openButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      modal.classList.add("open");
+    });
+  });
+
+  // Close modal
+  closeModalButton.addEventListener("click", () => {
+    modal.classList.remove("open");
+  });
+
+  // Close modal when clicking outside the content
+  modalOverlay.addEventListener("click", (event) => {
+    if (event.target === modalOverlay) {
+      modal.classList.remove("open");
+    }
+  });
 });

@@ -258,8 +258,15 @@
         />
         <img
           class="payment-logos__img"
-          src="assets/images/paynet.svg"
+          src="assets/images/paypal.svg"
           alt="paypal"
+          height="24"
+          width="100"
+        />
+        <img
+          class="payment-logos__img"
+          src="assets/images/paynet.svg"
+          alt="paynet"
           height="24"
           width="24"
         />
@@ -352,6 +359,80 @@
         </span>
       </div>
     </footer>
+
+    <div id="payment-modal" class="modal">
+      <div class="modal__content">
+        <button class="modal__close" aria-label="Close">
+          <img
+            class="modal__close-img"
+            src="assets/images/close.svg"
+            height="24"
+            width="24"
+            alt="close"
+          />
+        </button>
+        <h3 class="modal__title">Choose a Payment</h3>
+        <form class="modal__form">
+          <label class="radio">
+            <input
+              type="radio"
+              name="payment"
+              value="credit-card"
+              class="radio__input"
+              checked
+            />
+            <span class="radio__custom"></span>
+            <span class="radio__label">
+              Credit Card
+              <div class="radio__label-logos">
+                <img
+                  class="payment-logos__img"
+                  src="assets/images/mastercard.svg"
+                  alt="mastercard"
+                  height="16"
+                  width="26"
+                />
+                <img
+                  class="payment-logos__img"
+                  src="assets/images/visa-color.svg"
+                  alt="visa"
+                  height="16"
+                  width="34"
+                />
+                <img
+                  class="payment-logos__img"
+                  src="assets/images/american-express.svg"
+                  alt="visa"
+                  height="16"
+                  width="16"
+                /></div
+            ></span>
+          </label>
+          <label class="radio">
+            <input
+              type="radio"
+              name="payment"
+              value="paypal"
+              class="radio__input"
+            />
+            <span class="radio__custom"></span>
+            <span class="radio__label">
+              Paypal
+              <div class="radio__label-logos">
+                <img
+                  class="payment-logos__img"
+                  src="assets/images/paypal-color.svg"
+                  alt="paypal"
+                  height="16"
+                  width="67"
+                />
+              </div>
+            </span>
+          </label>
+          <button class="modal__button" type="button">Get Started</button>
+        </form>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
