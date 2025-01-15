@@ -107,4 +107,27 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.classList.remove("open");
     }
   });
+
+  const password = document.getElementById("password") as HTMLInputElement;
+  const confirmPassword = document.getElementById(
+    "confirmPassword"
+  ) as HTMLInputElement;
+  const togglePassword = document.getElementById(
+    "togglePassword"
+  ) as HTMLButtonElement;
+  const toggleConfirmPassword = document.getElementById(
+    "toggleConfirmPassword"
+  ) as HTMLButtonElement;
+
+  togglePassword.addEventListener("click", () => {
+    const type = password.type === "password" ? "text" : "password";
+    password.type = type;
+    togglePassword.textContent = type === "password" ? "Show" : "Hide";
+  });
+
+  toggleConfirmPassword.addEventListener("click", () => {
+    const type = confirmPassword.type === "password" ? "text" : "password";
+    confirmPassword.type = type;
+    toggleConfirmPassword.textContent = type === "password" ? "Show" : "Hide";
+  });
 });
