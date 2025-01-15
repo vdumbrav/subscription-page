@@ -759,6 +759,8 @@ body {
 @media (max-width: 992px) {
   .pricing .swiper-wrapper {
     display: flex;
+    gap: 0;
+    justify-content: start;
   }
 }
 .pricing .swiper-slide {
