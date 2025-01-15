@@ -209,21 +209,22 @@ body {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
   }
 
   &__button {
     width: 100%;
-    margin-top: 36px;
+    height: 48px;
+    margin-top: 8px;
     padding: 12px 24px;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
-    color: var(--secondary-color);
+    color: #0c1921;
     border: none;
     border-radius: 8px;
     background-color: var(--white);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
 
     &:hover {
       color: var(--primary-color);
@@ -235,11 +236,23 @@ body {
 .radio {
   display: flex;
   align-items: center;
+  padding: 12px;
   cursor: pointer;
-  color: inherit;
+  transition: background-color 0.3s, font-weight 0.2s;
   border-radius: 8px;
+  background-color: #1d3340;
   font-size: 16px;
-  line-height: 26px;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: rgba(#1d3340, 0.5);
+  }
+
+  &--selected {
+    background-color: #13646c;
+    font-weight: 600;
+  }
 
   &__input {
     display: none;
@@ -247,20 +260,19 @@ body {
 
   &__label {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    transition: font-weight 0.2s;
   }
 
   &__custom {
     position: relative;
     width: 20px;
-    min-width: 20px;
     height: 20px;
+    min-width: 20px;
     margin-right: 12px;
-    transition: background-color 0.2s, border-color 0.2s;
-    border: 1px solid var(--white);
+    transition: background-color 0.3s, border-color 0.3s;
+    border: 1px solid #FFFFFF80;
     border-radius: 50%;
 
     &::after {
@@ -270,10 +282,16 @@ body {
       width: 0;
       height: 0;
       content: "";
-      transition: 0.2s;
+      transition: width 0.3s, height 0.3s, background-color 0.3s;
       transform: translate(-50%, -50%);
       border-radius: 50%;
       background-color: transparent;
+    }
+  }
+
+  &--selected {
+    .radio__custom {
+      border-color:  var(--white);
     }
   }
 
@@ -284,10 +302,6 @@ body {
       width: 16px;
       height: 16px;
       background-color: var(--white);
-    }
-
-    & + .radio__label {
-      font-weight: 500;
     }
   }
 }
@@ -369,22 +383,6 @@ body {
 
   &__button.open .custom-dropdown__icon {
     transform: rotate(-135deg);
-  }
-}
-
-.payment-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 200px;
-  gap: 21px;
-
-  @media (max-width: 992px) {
-    display: none;
-  }
-
-  &__img {
-    object-fit: contain;
   }
 }
 
@@ -511,7 +509,7 @@ body {
   &__form {
     display: flex;
     flex-direction: column;
-    margin-top: 32px;
+    margin-top: 8px;
     gap: 12px;
 
     .radio {
