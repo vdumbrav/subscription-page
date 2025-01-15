@@ -83,4 +83,18 @@ document.addEventListener("DOMContentLoaded", () => {
             modal.classList.remove("open");
         }
     });
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirmPassword");
+    const togglePassword = document.getElementById("togglePassword");
+    const toggleConfirmPassword = document.getElementById("toggleConfirmPassword");
+    togglePassword.addEventListener("click", () => {
+        const type = password.type === "password" ? "text" : "password";
+        password.type = type;
+        togglePassword.textContent = type === "password" ? "Show" : "Hide";
+    });
+    toggleConfirmPassword.addEventListener("click", () => {
+        const type = confirmPassword.type === "password" ? "text" : "password";
+        confirmPassword.type = type;
+        toggleConfirmPassword.textContent = type === "password" ? "Show" : "Hide";
+    });
 });

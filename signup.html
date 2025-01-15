@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <main class="sign-up-page">
+      <h1 class="sign-up-page__title">Create New Account</h1>
+      <p class="sign-up-page__subtitle">
+        If you already have an account on our website, please
+        <a href="/">log in</a> to continue.
+      </p>
+
+      <section class="sign-up-form">
+        <form class="form" autocomplete="off">
+          <!-- First Name -->
+          <label class="form__field">
+            <div class="form__icon">
+              <img
+                src="./assets/images/letter.svg"
+                height="24"
+                width="24"
+                alt="mail"
+              />
+            </div>
+            <span class="form__asterisk">*</span>
+            <input
+              type="text"
+              class="form__input"
+              placeholder="First name"
+              required
+            />
+          </label>
+
+          <!-- Last Name -->
+          <label class="form__field">
+            <div class="form__icon">
+              <img
+                src="./assets/images/letter.svg"
+                height="24"
+                width="24"
+                alt="mail"
+              />
+            </div>
+            <span class="form__asterisk">*</span>
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Second name"
+              required
+            />
+          </label>
+
+          <!-- Username -->
+          <label class="form__field">
+            <div class="form__icon">
+              <img
+                src="./assets/images/letter.svg"
+                height="24"
+                width="24"
+                alt="mail"
+              />
+            </div>
+            <span class="form__asterisk">*</span>
+            <input
+              type="text"
+              class="form__input"
+              placeholder="User name"
+              required
+            />
+          </label>
+
+          <!-- Email -->
+          <label class="form__field">
+            <div class="form__icon">
+              <img
+                src="./assets/images/mail.svg"
+                height="24"
+                width="24"
+                alt="mail"
+              />
+            </div>
+            <span class="form__asterisk">*</span>
+            <input
+              type="email"
+              class="form__input"
+              placeholder="Email"
+              required
+            />
+          </label>
+
+          <!-- Password -->
+          <label class="form__field">
+            <div class="form__icon">
+              <img
+                src="./assets/images/asterics.svg"
+                height="24"
+                width="24"
+                alt="asterics"
+              />
+            </div>
+            <span class="form__asterisk">*</span>
+            <input
+              type="password"
+              class="form__input"
+              placeholder="Password"
+              required
+              id="password"
+            />
+            <button type="button" class="form__toggle" id="togglePassword">
+              <img
+                height="24"
+                width="24"
+                src="./assets/images/open-eye.svg"
+                alt="open"
+              />
+            </button>
+          </label>
+
+          <!-- Confirm Password -->
+          <label class="form__field">
+            <div class="form__icon">
+              <img
+                src="./assets/images/asterics.svg"
+                height="24"
+                width="24"
+                alt="asterics"
+              />
+            </div>
+            <span class="form__asterisk">*</span>
+            <input
+              type="password"
+              class="form__input"
+              placeholder="Confirm password"
+              required
+              id="confirmPassword"
+            />
+            <button type="button" class="form__toggle" id="togglePassword">
+              <img
+                height="24"
+                width="24"
+                src="./assets/images/open-eye.svg"
+                alt="open"
+              />
+            </button>
+          </label>
+
+          <p class="form__note">
+            If you didn't receive a confirmation email, please, contact us via
+            live chat in the right bottom corner of the website. Also, mark our
+            emails as "NOT SPAM" to receive our scheduled discounts and
+            essential info!
+          </p>
+
+          <div class="form__actions">
+            <button type="button" class="button button--secondary">Back</button>
+            <button type="submit" class="button button--primary">
+              Confirm
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
