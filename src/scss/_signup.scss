@@ -48,24 +48,45 @@
 
   &__label {
     display: flex;
-    flex-direction: column;
-    font-size: var(--font-size-body-md);
+    font-size: 16px;
+    padding: 0 12px;
+    align-items: center;
     color: var(--white);
+    background-color: #0b1820;
+    min-height: 42px;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin-right: 4px;
   }
 
   &__input {
-    width: 100%;
-    padding: 12px;
+    padding: 8px 8px 8px 2px;
     font-size: 16px;
-    color: var(--gray-90);
-    background-color: var(--white);
-    border: 1px solid var(--gray-40);
-    border-radius: 8px;
+    color: var(--white);
+    background: none;
+    border: none;
+    flex: 1;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: var(--white);
+    }
 
     &:focus {
       outline: none;
       border-color: var(--primary-color);
     }
+  }
+
+  &__asterisk {
+    color: var(--danger);
+    margin-bottom: 12px;
   }
 
   &__note {

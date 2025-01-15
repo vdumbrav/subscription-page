@@ -20,9 +20,17 @@
       </p>
 
       <section class="sign-up-form">
-        <form class="form">
+        <form class="form" autocomplete="off">
           <label class="form__label">
-            <span>First name</span>
+            <div class="form__icon">
+              <img
+                src="./assets/images/mail.svg"
+                height="24"
+                width="24"
+                alt="mail"
+              />
+            </div>
+            <span class="form__asterisk">*</span>
             <input
               type="text"
               class="form__input"
@@ -31,7 +39,6 @@
             />
           </label>
           <label class="form__label">
-            <span>Last name</span>
             <input
               type="text"
               class="form__input"
@@ -40,7 +47,6 @@
             />
           </label>
           <label class="form__label">
-            <span>Username</span>
             <input
               type="text"
               class="form__input"
@@ -49,7 +55,6 @@
             />
           </label>
           <label class="form__label">
-            <span>Email</span>
             <input
               type="email"
               class="form__input"
@@ -58,7 +63,6 @@
             />
           </label>
           <label class="form__label">
-            <span>Password</span>
             <input
               type="password"
               class="form__input"
@@ -67,7 +71,6 @@
             />
           </label>
           <label class="form__label">
-            <span>Confirm Password</span>
             <input
               type="password"
               class="form__input"
@@ -77,8 +80,10 @@
           </label>
 
           <p class="form__note">
-            If you didn't receive a confirmation email, please contact us via
-            live chat in the right bottom corner of the website.
+            If you didn't receive a confirmation email, please, contact us via
+            live chat in the right bottom corner of the website. Also, mark our
+            emails as "NOT SPAM" to receive our scheduled discounts and
+            essential info!
           </p>
 
           <div class="form__actions">
