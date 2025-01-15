@@ -127,23 +127,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  let swiperInstance = null;
+  let swiperInstance: any = null;
 
   const initSwiper = () => {
     const isMobile = window.innerWidth <= 992;
 
-    if (isMobile && !swiperInstance) {
-      swiperInstance = new Swiper(".swiper", {
-        slidesPerView: 1,
-        spaceBetween: 16,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    } else if (!isMobile && swiperInstance) {
-      swiperInstance.destroy(true, true);
-      swiperInstance = null;
+    const swiperContainer = document.querySelector(".swiper");
+
+    if (swiperContainer) {
+      if (isMobile && !swiperInstance) {
+        swiperInstance = new (window as any).Swiper(".swiper", {
+          slidesPerView: 1,
+          spaceBetween: 16,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      } else if (!isMobile && swiperInstance) {
+        swiperInstance.destroy(true, true);
+        swiperInstance = null;
+      }
     }
 
     console.log(`Swiper initialized: ${isMobile}`);
@@ -153,4 +157,3 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", initSwiper);
   window.addEventListener("resize", initSwiper);
 });
-
