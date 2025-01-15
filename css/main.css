@@ -873,13 +873,30 @@ body {
   background-color: #0b1820;
   font-size: 16px;
 }
-.form__icon {
+.form__field .form__toggle {
+  position: relative;
   display: flex;
   align-items: center;
-  margin-right: 4px;
-  justify-self: center;
+  padding: 0;
+  border: none;
+  background: none;
 }
-.form__input {
+.form__field .form__toggle .form__toggle-icon {
+  display: block;
+}
+.form__field .form__toggle .form__toggle-icon.show {
+  display: block;
+}
+.form__field .form__toggle .form__toggle-icon.hide {
+  display: none;
+}
+.form__field .form__toggle.visible .form__toggle-icon.show {
+  display: none;
+}
+.form__field .form__toggle.visible .form__toggle-icon.hide {
+  display: block;
+}
+.form__field .form__input {
   flex: 1;
   box-sizing: border-box;
   padding: 8px 8px 8px 2px;
@@ -888,23 +905,22 @@ body {
   background: none;
   font-size: 16px;
 }
-.form__input::placeholder {
-  color: var(--white);
+.form__field .form__input::placeholder {
+  color: var(--gray-75);
 }
-.form__input:focus {
+.form__field .form__input:focus {
   border-color: var(--primary-color);
   outline: none;
 }
-.form__asterisk {
-  margin-bottom: 12px;
-  color: var(--danger);
-}
-.form__toggle {
+.form__field .form__icon {
   display: flex;
   align-items: center;
-  padding: 0;
-  border: none;
-  background: none;
+  margin-right: 4px;
+  justify-self: center;
+}
+.form__field .form__asterisk {
+  margin-bottom: 12px;
+  color: var(--danger);
 }
 .form__note {
   margin: 36px 0 0;
@@ -951,10 +967,7 @@ body {
 }
 
 input:-webkit-autofill {
-  /* Prevent background color reset */
   transition: background-color 5000s ease-in-out 0s;
-  /* Background color */
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-  /* Text color */
   -webkit-text-fill-color: var(--gray-75);
 }
