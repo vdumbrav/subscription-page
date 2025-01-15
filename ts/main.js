@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const swiperContainer = document.querySelector(".swiper");
         if (swiperContainer) {
             if (isMobile && !swiperInstance) {
-                swiperInstance = new window.Swiper(".swiper", {
+                swiperInstance = new Swiper(".swiper", {
                     slidesPerView: 1,
                     spaceBetween: 16,
                     pagination: {
