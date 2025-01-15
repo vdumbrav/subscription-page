@@ -139,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
         swiperInstance = new (window as any).Swiper(".swiper", {
           slidesPerView: 1,
           spaceBetween: 16,
+          initialSlide: 1, // start from the second slide
           pagination: {
             el: ".swiper-pagination",
             clickable: true,
