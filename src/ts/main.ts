@@ -1,6 +1,3 @@
-import Swiper , { Pagination }from "swiper";
-import "swiper/swiper-bundle.css";
-
 document.addEventListener("DOMContentLoaded", () => {
   // Pricing Cards
   const pricingCards =
@@ -127,14 +124,16 @@ document.addEventListener("DOMContentLoaded", () => {
   radioInputs.forEach((input) => {
     input.addEventListener("change", handleRadioSelection);
   });
+});
 
-  let swiperInstance: Swiper | null = null;
+document.addEventListener("DOMContentLoaded", () => {
+  let swiperInstance = null;
 
-  // Function to initialize Swiper
-  const initSwiper = (): void => {
-    if (window.innerWidth <= 992 && !swiperInstance) {
+  const initSwiper = () => {
+    const isMobile = window.innerWidth <= 992;
+
+    if (isMobile && !swiperInstance) {
       swiperInstance = new Swiper(".swiper", {
-        modules: [Pagination],
         slidesPerView: 1,
         spaceBetween: 16,
         pagination: {
@@ -142,13 +141,16 @@ document.addEventListener("DOMContentLoaded", () => {
           clickable: true,
         },
       });
-    } else if (window.innerWidth > 992 && swiperInstance) {
+    } else if (!isMobile && swiperInstance) {
       swiperInstance.destroy(true, true);
       swiperInstance = null;
     }
+
+    console.log(`Swiper initialized: ${isMobile}`);
   };
 
-  // Attach event listeners
+  // Initialize Swiper on page load and resize
   window.addEventListener("load", initSwiper);
   window.addEventListener("resize", initSwiper);
 });
+

@@ -32,16 +32,43 @@ body {
 }
 
 .pricing {
-  display: grid;
-  justify-content: center;
   padding: 40px 30px 64px;
-  grid-template-columns: repeat(3, minmax(288px, 400px));
-  gap: 30px;
 
   @media (max-width: 992px) {
-    padding: 16px 0;
-    grid-template-columns: repeat(1, minmax(288px, 396px));
-    gap: 48px;
+    padding: 16px 0 36px;
+  }
+
+  &.swiper {
+    @media (max-width: 992px) {
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+
+  .swiper-wrapper {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, minmax(288px, 400px));
+    gap: 30px;
+
+    @media (max-width: 992px) {
+      display: flex;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swiper-pagination {
+    display: none;
+
+    @media (max-width: 992px) {
+      display: block;
+      margin-top: 48px;
+    }
   }
 
   &__card {
@@ -55,6 +82,8 @@ body {
     background-color: var(--background-color);
 
     @media (max-width: 992px) {
+      width: 400px;
+      max-width: 100%;
       padding: 36px 24px 40px 24px;
     }
 
@@ -62,6 +91,7 @@ body {
       &__dot {
         position: relative;
         width: 36px;
+        min-width: 36px;
         height: 36px;
         margin-bottom: 12px;
         margin-left: auto;
@@ -88,11 +118,10 @@ body {
       }
 
       &__title {
-        margin: 0;
-        font-size: var(--font-size-h3);
         display: flex;
         align-items: center;
-        margin-bottom: 8px;
+        margin: 0;
+        font-size: var(--font-size-h3);
 
         @media (max-width: 992px) {
           font-weight: 500;
@@ -107,7 +136,7 @@ body {
       }
 
       &__price {
-        margin: 28px 0;
+        margin: 24px 0;
         font-size: 40px;
         font-weight: 600;
 
@@ -121,10 +150,10 @@ body {
 
       &__features {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
         margin-top: 24px;
         margin-bottom: 0;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
 
         &-item {
           display: flex;
@@ -241,14 +270,14 @@ body {
 .radio {
   display: flex;
   align-items: center;
+  box-sizing: border-box;
+  width: 100%;
   padding: 12px;
   cursor: pointer;
   transition: background-color 0.3s, font-weight 0.2s;
   border-radius: 8px;
   background-color: #1d3340;
   font-size: 16px;
-  width: 100%;
-  box-sizing: border-box;
 
   &:hover {
     background-color: rgba(#1d3340, 0.5);
@@ -265,16 +294,16 @@ body {
 
   &__label {
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
 
   &__custom {
     position: relative;
     width: 20px;
-    height: 20px;
     min-width: 20px;
+    height: 20px;
     margin-right: 12px;
     transition: background-color 0.3s, border-color 0.3s;
     border: 1px solid #ffffff80;
@@ -408,6 +437,7 @@ body {
     align-items: flex-start;
     flex-direction: column-reverse;
     justify-content: flex-start;
+    margin-top: 24px;
     padding: 32px 16px;
     border-radius: 0;
     gap: 40px;
@@ -520,6 +550,7 @@ body {
     .radio {
       padding: 12px;
       border: 1px solid #0a090f33;
+      background-color: transparent;
       gap: 0;
 
       &__custom {
