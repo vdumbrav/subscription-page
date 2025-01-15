@@ -21,7 +21,65 @@
 
       <section class="sign-up-form">
         <form class="form" autocomplete="off">
-          <label class="form__label">
+          <!-- First Name -->
+          <label class="form__field">
+            <div class="form__icon">
+              <img
+                src="./assets/images/letter.svg"
+                height="24"
+                width="24"
+                alt="mail"
+              />
+            </div>
+            <span class="form__asterisk">*</span>
+            <input
+              type="text"
+              class="form__input"
+              placeholder="First name"
+              required
+            />
+          </label>
+
+          <!-- Last Name -->
+          <label class="form__field">
+            <div class="form__icon">
+              <img
+                src="./assets/images/letter.svg"
+                height="24"
+                width="24"
+                alt="mail"
+              />
+            </div>
+            <span class="form__asterisk">*</span>
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Second name"
+              required
+            />
+          </label>
+
+          <!-- Username -->
+          <label class="form__field">
+            <div class="form__icon">
+              <img
+                src="./assets/images/letter.svg"
+                height="24"
+                width="24"
+                alt="mail"
+              />
+            </div>
+            <span class="form__asterisk">*</span>
+            <input
+              type="text"
+              class="form__input"
+              placeholder="User name"
+              required
+            />
+          </label>
+
+          <!-- Email -->
+          <label class="form__field">
             <div class="form__icon">
               <img
                 src="./assets/images/mail.svg"
@@ -32,51 +90,67 @@
             </div>
             <span class="form__asterisk">*</span>
             <input
-              type="text"
-              class="form__input"
-              placeholder="Enter your first name"
-              required
-            />
-          </label>
-          <label class="form__label">
-            <input
-              type="text"
-              class="form__input"
-              placeholder="Enter your last name"
-              required
-            />
-          </label>
-          <label class="form__label">
-            <input
-              type="text"
-              class="form__input"
-              placeholder="Enter your username"
-              required
-            />
-          </label>
-          <label class="form__label">
-            <input
               type="email"
               class="form__input"
-              placeholder="Enter your email"
+              placeholder="Email"
               required
             />
           </label>
-          <label class="form__label">
+
+          <!-- Password -->
+          <label class="form__field">
+            <div class="form__icon">
+              <img
+                src="./assets/images/asterics.svg"
+                height="24"
+                width="24"
+                alt="asterics"
+              />
+            </div>
+            <span class="form__asterisk">*</span>
             <input
               type="password"
               class="form__input"
-              placeholder="Enter your password"
+              placeholder="Password"
               required
+              id="password"
             />
+            <button type="button" class="form__toggle" id="togglePassword">
+              <img
+                height="24"
+                width="24"
+                src="./assets/images/open-eye.svg"
+                alt="open"
+              />
+            </button>
           </label>
-          <label class="form__label">
+
+          <!-- Confirm Password -->
+          <label class="form__field">
+            <div class="form__icon">
+              <img
+                src="./assets/images/asterics.svg"
+                height="24"
+                width="24"
+                alt="asterics"
+              />
+            </div>
+            <span class="form__asterisk">*</span>
             <input
               type="password"
               class="form__input"
-              placeholder="Confirm your password"
+              placeholder="Confirm password"
               required
+              id="confirmPassword"
             />
+            <button type="button" class="form__toggle" id="togglePassword">
+              <img
+                height="24"
+                width="24"
+                src="./assets/images/open-eye.svg"
+                alt="open"
+              />
+            </button>
           </label>
 
           <p class="form__note">
