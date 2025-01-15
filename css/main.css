@@ -466,20 +466,21 @@ body {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
 }
 .payment-system__button {
   width: 100%;
-  margin-top: 36px;
+  height: 48px;
+  margin-top: 8px;
   padding: 12px 24px;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
-  color: var(--secondary-color);
+  color: #0c1921;
   border: none;
   border-radius: 8px;
   background-color: var(--white);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .payment-system__button:hover {
   color: var(--primary-color);
@@ -489,30 +490,39 @@ body {
 .radio {
   display: flex;
   align-items: center;
+  padding: 12px;
   cursor: pointer;
-  color: inherit;
+  transition: background-color 0.3s, font-weight 0.2s;
   border-radius: 8px;
+  background-color: #1d3340;
   font-size: 16px;
-  line-height: 26px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.radio:hover {
+  background-color: rgba(29, 51, 64, 0.5);
+}
+.radio--selected {
+  background-color: #13646c;
+  font-weight: 600;
 }
 .radio__input {
   display: none;
 }
 .radio__label {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  transition: font-weight 0.2s;
 }
 .radio__custom {
   position: relative;
   width: 20px;
-  min-width: 20px;
   height: 20px;
+  min-width: 20px;
   margin-right: 12px;
-  transition: background-color 0.2s, border-color 0.2s;
-  border: 1px solid var(--white);
+  transition: background-color 0.3s, border-color 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5019607843);
   border-radius: 50%;
 }
 .radio__custom::after {
@@ -522,10 +532,13 @@ body {
   width: 0;
   height: 0;
   content: "";
-  transition: 0.2s;
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background-color: transparent;
+}
+.radio--selected .radio__custom {
+  border-color: var(--white);
 }
 .radio__input:checked + .radio__custom {
   border-color: var(--white);
@@ -534,9 +547,6 @@ body {
   width: 16px;
   height: 16px;
   background-color: var(--white);
-}
-.radio__input:checked + .radio__custom + .radio__label {
-  font-weight: 500;
 }
 
 .custom-dropdown {
@@ -608,22 +618,6 @@ body {
 }
 .custom-dropdown__button.open .custom-dropdown__icon {
   transform: rotate(-135deg);
-}
-
-.payment-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 200px;
-  gap: 21px;
-}
-@media (max-width: 992px) {
-  .payment-logos {
-    display: none;
-  }
-}
-.payment-logos__img {
-  object-fit: contain;
 }
 
 .footer {
@@ -742,7 +736,7 @@ body {
 .modal__form {
   display: flex;
   flex-direction: column;
-  margin-top: 32px;
+  margin-top: 8px;
   gap: 12px;
 }
 .modal__form .radio {

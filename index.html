@@ -205,18 +205,7 @@
 
       <section class="payment-system">
         <form class="payment-system__form">
-          <label class="radio">
-            <input
-              type="radio"
-              name="payment"
-              value="paynet"
-              class="radio__input"
-              checked
-            />
-            <span class="radio__custom"></span>
-            <span class="radio__label">Paynet - pay by card</span>
-          </label>
-          <label class="radio">
+          <label class="radio" id="paypal-radio">
             <input
               type="radio"
               name="payment"
@@ -225,7 +214,53 @@
             />
             <span class="radio__custom"></span>
             <span class="radio__label">
-              Paypal - Pay with your PayPal account
+              Paypal
+              <div class="radio__label-logos">
+                <img
+                  class="payment-logos__img"
+                  src="assets/images/paypal.svg"
+                  alt="paypal"
+                  height="16"
+                  width="67"
+                />
+              </div>
+            </span>
+          </label>
+
+          <label class="radio radio--selected" id="paynet-radio">
+            <input
+              type="radio"
+              name="payment"
+              value="paynet"
+              class="radio__input"
+              checked
+            />
+            <span class="radio__custom"></span>
+            <span class="radio__label">
+              Credit Card
+              <div class="radio__label-logos">
+                <img
+                  class="payment-logos__img"
+                  src="assets/images/mastercard.svg"
+                  alt="mastercard"
+                  height="16"
+                  width="26"
+                />
+                <img
+                  class="payment-logos__img"
+                  src="assets/images/visa.svg"
+                  alt="visa"
+                  height="16"
+                  width="34"
+                />
+                <img
+                  class="payment-logos__img"
+                  src="assets/images/american-express.svg"
+                  alt="visa"
+                  height="16"
+                  width="16"
+                />
+              </div>
             </span>
           </label>
           <button class="payment-system__button" type="button">

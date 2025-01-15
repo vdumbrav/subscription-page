@@ -78,4 +78,21 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     });
+    const radioInputs = document.querySelectorAll(".radio__input");
+    // Function to handle selected state
+    const handleRadioSelection = (event) => {
+        const target = event.target;
+        const radios = document.querySelectorAll(".radio");
+        radios.forEach((radio) => {
+            radio.classList.remove("radio--selected");
+        });
+        const parent = target.closest(".radio");
+        if (parent) {
+            parent.classList.add("radio--selected");
+        }
+    };
+    // Add event listeners to all radio inputs
+    radioInputs.forEach((input) => {
+        input.addEventListener("change", handleRadioSelection);
+    });
 });
