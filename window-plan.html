@@ -56,53 +56,130 @@
               </p>
             </header>
 
-            <div class="pricing-card">
-              <h3 class="pricing-card__title">Ultimates Sports</h3>
-              <p class="pricing-card__price">
-                $19.99 <small class="pricing-card__price-text">/ monthly</small>
+            <div class="pricing__card">
+              <h2 class="pricing__title">
+                US Sport
+                <div class="pricing__dot"></div>
+              </h2>
+              <p class="pricing__subtitle">
+                Get 7 days of Full Access to the NFL, NHL, NBA, MLB, NCAAF and
+                NCAAB.
               </p>
-              <div class="dropdown">
-                <button class="dropdown__button">
-                  Monthly subscription <span class="dropdown__icon"></span>
+              <span class="pricing__price">
+                $14 <small class="pricing__price-text">.99 / 7 days</small>
+              </span>
+
+              <div class="custom-dropdown">
+                <button class="custom-dropdown__button">
+                  Monthly subscription
+                  <span class="custom-dropdown__icon"></span>
                 </button>
-                <ul class="dropdown__menu">
-                  <li class="dropdown__item">7 Days subscription</li>
-                  <li class="dropdown__item">Monthly subscription</li>
-                  <li class="dropdown__item">Annual subscription</li>
+                <ul class="custom-dropdown__menu">
+                  <li class="custom-dropdown__item">7 Days subscription</li>
+                  <li class="custom-dropdown__item">Monthly subscription</li>
+                  <li class="custom-dropdown__item">Annual subscription</li>
                 </ul>
               </div>
 
-              <ul class="pricing-card__features">
-                <li class="pricing-card__feature">
-                  <span class="pricing-card__icon">∞</span> Unlimited Access
+              <ul class="pricing__features">
+                <li class="pricing__features-item">
+                  <img
+                    src="assets/images/unlimited.svg"
+                    alt="unlimited"
+                    height="48px"
+                    width="48px"
+                  />
+                  <p class="pricing__features-text">Unlimited Access</p>
                 </li>
-                <li class="pricing-card__feature">
-                  <span class="pricing-card__icon">4K</span> HD Streaming -
-                  1080, 4K
+                <li class="pricing__features-item">
+                  <img
+                    src="assets/images/4k.svg"
+                    alt="4k"
+                    height="48px"
+                    width="48px"
+                  />
+                  <p class="pricing__features-text">HD Streaming</p>
                 </li>
-                <li class="pricing-card__feature">
-                  <span class="pricing-card__icon">⛔</span> No Blackouts
+                <li class="pricing__features-item">
+                  <img
+                    src="assets/images/no-blackouts.svg"
+                    alt="No Blackouts"
+                    height="48px"
+                    width="48px"
+                  />
+                  <p class="pricing__features-text">No Blackouts</p>
                 </li>
-                <li class="pricing-card__feature">
-                  <span class="pricing-card__icon">💻</span> All Platforms
+                <li class="pricing__features-item">
+                  <img
+                    src="assets/images/all-platforms.svg"
+                    alt="all-platforms"
+                    height="48px"
+                    width="48px"
+                  />
+                  <p class="pricing__features-text">All Platforms</p>
                 </li>
               </ul>
+              <button class="pricing__btn">Get Started</button>
             </div>
 
-            <form class="payment-method">
-              <label class="payment-method__option">
-                <input type="radio" name="payment" checked />
-                <span>Credit Card</span>
-                <img src="assets/images/visa.svg" alt="visa" />
+            <form class="modal__form">
+              <label class="radio">
+                <input
+                  type="radio"
+                  name="payment"
+                  value="credit-card"
+                  class="radio__input"
+                  checked
+                />
+                <span class="radio__custom"></span>
+                <span class="radio__label">
+                  Credit Card
+                  <div class="radio__label-logos">
+                    <img
+                      class="payment-logos__img"
+                      src="assets/images/mastercard.svg"
+                      alt="mastercard"
+                      height="16"
+                      width="26"
+                    />
+                    <img
+                      class="payment-logos__img"
+                      src="assets/images/visa-color.svg"
+                      alt="visa"
+                      height="16"
+                      width="34"
+                    />
+                    <img
+                      class="payment-logos__img"
+                      src="assets/images/american-express.svg"
+                      alt="visa"
+                      height="16"
+                      width="16"
+                    /></div
+                ></span>
               </label>
-              <label class="payment-method__option">
-                <input type="radio" name="payment" />
-                <span>Paypal</span>
-                <img src="assets/images/paypal.svg" alt="paypal" />
+              <label class="radio">
+                <input
+                  type="radio"
+                  name="payment"
+                  value="paypal"
+                  class="radio__input"
+                />
+                <span class="radio__custom"></span>
+                <span class="radio__label">
+                  Paypal
+                  <div class="radio__label-logos">
+                    <img
+                      class="payment-logos__img"
+                      src="assets/images/paypal-color.svg"
+                      alt="paypal"
+                      height="16"
+                      width="67"
+                    />
+                  </div>
+                </span>
               </label>
-              <button type="button" class="payment-method__button">
-                Get Started
-              </button>
+              <button class="modal__button" type="button">Get Started</button>
             </form>
           </section>
         </div>

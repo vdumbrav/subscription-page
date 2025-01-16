@@ -1451,9 +1451,38 @@ input:-webkit-autofill {
   overflow-y: auto;
   width: 100%;
   height: 100%;
+  max-width: 100%;
   margin: auto;
   border-radius: 16px;
   grid-template-columns: 43% minmax(440px, 57%);
+}
+@media (max-width: 992px) {
+  .pricing-modal {
+    grid-template-columns: 1fr;
+    width: 370px;
+  }
+}
+.pricing-modal .modal__form {
+  color: #0a090f;
+}
+.pricing-modal .pricing__card {
+  background: #1b565d;
+  margin: 0 auto 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.pricing-modal .pricing__dot {
+  display: none;
+}
+.pricing-modal .pricing__subtitle {
+  display: none;
+}
+.pricing-modal .pricing__features-text {
+  font-size: 16px;
+}
+.pricing-modal .pricing__features {
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 .pricing-modal__options {
   display: flex;
@@ -1471,8 +1500,11 @@ input:-webkit-autofill {
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
   color: var(--white);
-  border-bottom: 1px solid #1B565D;
+  border-bottom: 1px solid #1b565d;
   border-radius: 8px;
+}
+.pricing-modal .pricing-option:first-of-type {
+  margin-top: 32px;
 }
 .pricing-modal .pricing-option:last-of-type {
   border-bottom-color: transparent;
@@ -1514,23 +1546,38 @@ input:-webkit-autofill {
   background: rgba(255, 255, 255, 0.2);
 }
 .pricing-modal .pricing-option--selected {
-  background-color: #1B565D;
+  background-color: #1b565d;
 }
 .pricing-modal__details {
-  padding: 24px;
+  padding: 16px 24px 48px;
   background: var(--white);
+  color: #0a090f;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
-.pricing-modal__details__header {
-  margin-bottom: 24px;
+.pricing-modal__header {
+  margin-bottom: 32px;
   text-align: center;
 }
-.pricing-modal__details__header__heading {
+@media (max-width: 992px) {
+  .pricing-modal__header {
+    display: none;
+  }
+}
+.pricing-modal__heading {
   font-size: 24px;
   font-weight: 700;
+  line-height: 1;
+  margin: 24px 0 16px;
 }
-.pricing-modal__details__header__subheading {
-  color: #666;
-  font-size: 14px;
+.pricing-modal__subheading {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
 }
 
 .pricing-card {
