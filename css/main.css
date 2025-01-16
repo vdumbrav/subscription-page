@@ -1368,9 +1368,8 @@ body {
   outline: none;
 }
 .form__field .form__icon {
-  display: flex;
+  display: none;
   align-items: center;
-  margin-right: 4px;
   justify-self: center;
 }
 .form__field .form__asterisk {
