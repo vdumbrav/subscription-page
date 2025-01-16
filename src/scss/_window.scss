@@ -24,9 +24,15 @@
   overflow-y: auto;
   width: 100%;
   height: 100%;
+  max-width: 100%;
   margin: auto;
   border-radius: 16px;
   grid-template-columns: 43% minmax(440px, 57%);
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    width: 370px;
+  }
 
   .modal__form {
     color: #0a090f;
@@ -34,7 +40,9 @@
 
   .pricing__card {
     background: #1b565d;
-    margin-bottom: 32px;
+    margin: 0 auto 32px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .pricing__dot {
@@ -132,11 +140,18 @@
     background: var(--white);
     color: #0a090f;
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
   }
 
   &__header {
     margin-bottom: 32px;
     text-align: center;
+
+    @media (max-width: 992px) {
+display: none;    }
   }
 
   &__heading {
@@ -144,6 +159,7 @@
     font-weight: 700;
     line-height: 1;
     margin: 24px 0 16px;
+
   }
 
   &__subheading {
