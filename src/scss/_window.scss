@@ -28,6 +28,32 @@
   border-radius: 16px;
   grid-template-columns: 43% minmax(440px, 57%);
 
+  .modal__form {
+    color: #0a090f;
+  }
+
+  .pricing__card {
+    background: #1b565d;
+    margin-bottom: 32px;
+  }
+
+  .pricing__dot {
+    display: none;
+  }
+
+  .pricing__subtitle {
+    display: none;
+  }
+
+  .pricing__features-text {
+    font-size: 16px;
+  }
+
+  .pricing__features {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
   &__options {
     display: flex;
     flex-direction: column;
@@ -45,8 +71,12 @@
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
     color: var(--white);
-    border-bottom: 1px solid #1B565D;
+    border-bottom: 1px solid #1b565d;
     border-radius: 8px;
+
+    &:first-of-type {
+      margin-top: 32px;
+    }
 
     &:last-of-type {
       border-bottom-color: transparent;
@@ -93,28 +123,34 @@
     }
 
     &--selected {
-      background-color: #1B565D;
+      background-color: #1b565d;
     }
   }
 
   &__details {
-    padding: 24px;
+    padding: 16px 24px 48px;
     background: var(--white);
+    color: #0a090f;
+    text-align: center;
+  }
 
-    &__header {
-      margin-bottom: 24px;
-      text-align: center;
+  &__header {
+    margin-bottom: 32px;
+    text-align: center;
+  }
 
-      &__heading {
-        font-size: 24px;
-        font-weight: 700;
-      }
+  &__heading {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 24px 0 16px;
+  }
 
-      &__subheading {
-        color: #666;
-        font-size: 14px;
-      }
-    }
+  &__subheading {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
   }
 }
 
