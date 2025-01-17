@@ -53,15 +53,6 @@
     display: none;
   }
 
-  .pricing__features-text {
-    font-size: 16px;
-  }
-
-  .pricing__features {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
   &__options {
     display: flex;
     flex-direction: column;
@@ -151,7 +142,8 @@
     text-align: center;
 
     @media (max-width: 992px) {
-display: none;    }
+      display: none;
+    }
   }
 
   &__heading {
@@ -159,7 +151,6 @@ display: none;    }
     font-weight: 700;
     line-height: 1;
     margin: 24px 0 16px;
-
   }
 
   &__subheading {
