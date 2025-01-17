@@ -1477,13 +1477,6 @@ input:-webkit-autofill {
 .pricing-modal .pricing__subtitle {
   display: none;
 }
-.pricing-modal .pricing__features-text {
-  font-size: 16px;
-}
-.pricing-modal .pricing__features {
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
 .pricing-modal__options {
   display: flex;
   flex-direction: column;
