@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pricingCards.forEach((card, index) => {
         card.addEventListener("click", (event) => {
             const target = event.target;
+            console.log(`Card ${index + 1} clicked.`);
             if (!target.closest(".custom-dropdown")) {
                 pricingCards.forEach((c) => c.classList.remove("pricing__card--selected"));
                 card.classList.add("pricing__card--selected");
@@ -123,4 +124,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize Swiper on page load and resize
     window.addEventListener("load", initSwiper);
     window.addEventListener("resize", initSwiper);
+    // ---------------------------- //
+    // Window frame
+    const pricingOptions = document.querySelectorAll(".pricing-option");
+    const pricingCards = document.querySelectorAll(".pricing__card");
+    if (pricingOptions.length > 0 && pricingCards.length > 0) {
+        pricingOptions[0].classList.add("pricing-option--selected");
+        pricingCards[0].classList.add("pricing__card--visible");
+    }
+    pricingOptions.forEach((option, index) => {
+        option.addEventListener("click", () => {
+            pricingOptions.forEach((o) => o.classList.remove("pricing-option--selected"));
+            pricingCards.forEach((card) => card.classList.remove("pricing__card--visible"));
+            option.classList.add("pricing-option--selected");
+            pricingCards[index].classList.add("pricing__card--visible");
+        });
+    });
 });
