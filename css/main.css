@@ -1450,31 +1450,29 @@ input:-webkit-autofill {
   display: grid;
   overflow-y: auto;
   width: 100%;
-  height: 100%;
   max-width: 100%;
+  height: 100%;
   margin: auto;
   border-radius: 16px;
   grid-template-columns: 43% minmax(440px, 57%);
 }
 @media (max-width: 992px) {
   .pricing-modal {
-    grid-template-columns: 1fr;
     width: 370px;
+    background-color: var(--white);
+    grid-template-columns: 1fr;
   }
 }
 .pricing-modal .modal__form {
   color: #0a090f;
 }
 .pricing-modal .pricing__card {
-  background: #1b565d;
-  margin: 0 auto 32px;
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto 32px;
+  background: #1b565d;
 }
 .pricing-modal .pricing__dot {
-  display: none;
-}
-.pricing-modal .pricing__subtitle {
   display: none;
 }
 .pricing-modal__options {
@@ -1482,8 +1480,21 @@ input:-webkit-autofill {
   flex-direction: column;
   padding: 48px 8px;
   color: var(--white);
-  background: rgba(25, 174, 183, 0.5);
+  background-color: rgba(25, 174, 183, 0.5);
   backdrop-filter: blur(30px);
+}
+@media (max-width: 992px) {
+  .pricing-modal__options {
+    display: grid;
+    margin: 16px 16px 0;
+    padding: 0;
+    color: #0a090f;
+    border: 1px solid rgba(10, 9, 15, 0.2);
+    border-radius: 8px;
+    background-color: transparent;
+    backdrop-filter: none;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .pricing-modal .pricing-option {
   display: flex;
@@ -1496,8 +1507,23 @@ input:-webkit-autofill {
   border-bottom: 1px solid #1b565d;
   border-radius: 8px;
 }
+@media (max-width: 992px) {
+  .pricing-modal .pricing-option {
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    text-align: center;
+    color: #0a090f;
+    border: none;
+  }
+}
 .pricing-modal .pricing-option:first-of-type {
   margin-top: 32px;
+}
+@media (max-width: 992px) {
+  .pricing-modal .pricing-option:first-of-type {
+    margin: 0;
+  }
 }
 .pricing-modal .pricing-option:last-of-type {
   border-bottom-color: transparent;
@@ -1508,12 +1534,22 @@ input:-webkit-autofill {
   font-weight: 600;
   line-height: 1.5;
 }
+@media (max-width: 992px) {
+  .pricing-modal .pricing-option__title {
+    font-weight: 400;
+  }
+}
 .pricing-modal .pricing-option__description {
   margin: 0;
   color: rgba(255, 255, 255, 0.75);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+}
+@media (max-width: 992px) {
+  .pricing-modal .pricing-option__description {
+    display: none;
+  }
 }
 .pricing-modal .pricing-option__note {
   display: flex;
@@ -1525,6 +1561,11 @@ input:-webkit-autofill {
   background: rgba(255, 255, 255, 0.1);
   font-size: 16px;
   gap: 10px;
+}
+@media (max-width: 992px) {
+  .pricing-modal .pricing-option__note {
+    display: none;
+  }
 }
 .pricing-modal .pricing-option__note-icon {
   display: flex;
@@ -1541,15 +1582,29 @@ input:-webkit-autofill {
 .pricing-modal .pricing-option--selected {
   background-color: #1b565d;
 }
+@media (max-width: 992px) {
+  .pricing-modal .pricing-option--selected {
+    color: var(--white);
+    background-color: var(--secondary-color);
+  }
+  .pricing-modal .pricing-option--selected .pricing-option__title {
+    font-weight: 600;
+  }
+}
 .pricing-modal__details {
-  padding: 16px 24px 48px;
-  background: var(--white);
-  color: #0a090f;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px 24px 48px;
+  text-align: center;
+  color: #0a090f;
+  background: var(--white);
+}
+@media (max-width: 992px) {
+  .pricing-modal__details {
+    padding: 16px;
+  }
 }
 .pricing-modal__header {
   margin-bottom: 32px;
@@ -1561,16 +1616,16 @@ input:-webkit-autofill {
   }
 }
 .pricing-modal__heading {
+  margin: 24px 0 16px;
   font-size: 24px;
   font-weight: 700;
   line-height: 1;
-  margin: 24px 0 16px;
 }
 .pricing-modal__subheading {
+  margin: 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
-  margin: 0;
 }
 
 .pricing-card {
