@@ -40,10 +40,20 @@
   }
 
   .pricing__card {
+    display: none;
     box-sizing: border-box;
     width: 100%;
     margin: 0 auto 32px;
+    opacity: 0.5;
+    transform-origin: center;
+    transform: translateX(-20%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
     background: #1b565d;
+
+    &--visible {
+      display: flex;
+      animation: slideIn 0.5s forwards;
+    }
   }
 
   .pricing__dot {
@@ -81,6 +91,10 @@
     color: var(--white);
     border-bottom: 1px solid #1b565d;
     border-radius: 8px;
+
+    &:hover {
+      background-color: rgba(27, 86, 93, 0.25);
+    }
 
     @media (max-width: 992px) {
       align-items: center;
@@ -178,6 +192,7 @@
     text-align: center;
     color: #0a090f;
     background: var(--white);
+    overflow-x: hidden;
 
     @media (max-width: 992px) {
       padding: 16px;
@@ -286,33 +301,13 @@
     }
   }
 }
-
-.payment-method {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  &__option {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    img {
-      height: 16px;
-    }
+@keyframes slideIn {
+  0% {
+    transform: translateX(20%);
+    opacity: 0.5;
   }
-
-  &__button {
-    padding: 12px;
-    cursor: pointer;
-    text-align: center;
-    color: var(--white);
-    border: none;
-    border-radius: 8px;
-    background: #118ab2;
-
-    &:hover {
-      background: #073b4c;
-    }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
