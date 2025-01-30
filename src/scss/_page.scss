@@ -10,6 +10,16 @@ body {
   background-size: auto;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  height: 66px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
 .pricing-page {
   display: flex;
   flex-direction: column;
@@ -20,7 +30,7 @@ body {
   }
 
   &__title {
-    margin: 80px 0 32px;
+    margin: 40px 0 32px;
     font-size: var(--font-size-h2);
     font-weight: 700;
     line-height: 1.3;
