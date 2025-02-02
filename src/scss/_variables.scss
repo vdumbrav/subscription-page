@@ -29,7 +29,7 @@
  --swiper-pagination-bullet-inactive-color: var(--gray-60)
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   :root {
     --font-size-h1: 56px;
     --font-size-h2: 32px;
